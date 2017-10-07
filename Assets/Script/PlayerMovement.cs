@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         PlayerBase = GameObject.Find(GameObjectNameConstants.PlayerBaseName);
+
 		rb = PlayerBase.GetComponent<Rigidbody> ();
 		Debug.Assert (rb != null);
 		
