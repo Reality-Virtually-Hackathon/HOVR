@@ -30,9 +30,10 @@ public class PedalMovementManager : MonoBehaviour {
 		tickDistanceTraveled = Vector3.Distance (previousLoc, currentLoc);
 		totalDistanceTraveled += tickDistanceTraveled;
 
-		Vector3 playerForward = playerBase.transform.forward;
+		Vector3 playerMovement = playerBase.transform.forward * tickDistanceTraveled;
 
-		playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerForward * pedalDistanceVelocityMultiplier);
+		if(tickDistanceTraveled > 0.001f;
+		playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerMovement * pedalDistanceVelocityMultiplier);
 
 	}
 }
