@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StayOnPath : MonoBehaviour {
 
+	//Accessed, and set true or false by script attached to boundaries of path
+	public bool onPath;
 	GameObject visionFader;
 	float visionBlockerLevel = 0f;
 
@@ -19,12 +21,6 @@ public class StayOnPath : MonoBehaviour {
 		} else {
 			visionBlockerLevel += 0.1f;
 		}
-
-	}
-
-	//Check if the player is currently within the approved area
-	bool CheckPosition(){
-		
 
 	}
 }
