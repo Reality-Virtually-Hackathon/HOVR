@@ -35,10 +35,10 @@ public class BouncingAnimal : MonoBehaviour {
 //			yield return true;
 //		}
 
-	void OnColliderEnter(Collider collider){
+	void OnCollisionEnter(Collision collision){
+		Debug.Log ("Collided with duck");
 		Instantiate (Smoke, this.transform);
 		Destroy (this);
-
 	}
 
 }
