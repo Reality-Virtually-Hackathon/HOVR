@@ -35,7 +35,7 @@ public class PlayerStats {
 
 	void saveSessionData (){
 		//Called at the end of a play session. Saves the statistics from the current play session to playerprefs.
-		//Turn the session data into a json string 
+		//Turn the session data string 
 		//Call a playerprefs.setstring
 
 
