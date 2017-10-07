@@ -7,8 +7,18 @@ public class PedalMovementManager : MonoBehaviour {
 	public GameObject pedalTrackerLeft, pedalTrackerRight;
 	public GameObject playerBase;
 
+    private SteamVR_TrackedObject lHandController, rHandController;
 
-	float totalDistanceTraveled;
+    private SteamVR_Controller.Device LController
+    {
+        get { return SteamVR_Controller.Input((int)lHandController.index); }
+    }
+    private SteamVR_Controller.Device RController
+    {
+        get { return SteamVR_Controller.Input((int)rHandController.index); }
+    }
+
+    float totalDistanceTraveled;
 	Vector3 previousLoc;
 	float pedalDistanceVelocityMultiplier = 2.0f;
 
@@ -20,21 +30,55 @@ public class PedalMovementManager : MonoBehaviour {
 		} else {
 			Debug.Log ("PedalMovementManager Initializiation Error: Could not find pedal tracker");
 		}
-	}
+
+    }
+
+    void Awake()
+    {
+        GameObject b = GameObject.Find(GameObjectNameConstants.PlayerBaseName);
+        GameObject lH = b.transform.Find("Controller (left)").gameObject;
+        Debug.Log(lH);
+
+        lHandController = GameObject.Find(GameObjectNameConstants.LeftController).GetComponent<SteamVR_TrackedObject>();
+        rHandController = GameObject.Find(GameObjectNameConstants.RightController).GetComponent<SteamVR_TrackedObject>();
+    }
+
+    void CheckSteps()
+    {
+        float tickDistanceTraveled = 0.0f;
+
+        Vector3 currentLoc = pedalTrackerLeft.transform.localPosition;
+        tickDistanceTraveled = Vector3.Distance(previousLoc, currentLoc);
+        totalDistanceTraveled += tickDistanceTraveled;
+
+        Vector3 playerMovement = playerBase.transform.forward * tickDistanceTraveled;
+
+        if (tickDistanceTraveled > 0.01f)
+        {
+            playerBase.GetComponent<PlayerMovement>().AddVelocity(playerMovement * pedalDistanceVelocityMultiplier);
+        }
+
+        previousLoc = currentLoc;
+    }
+
+    void CheckTurning()
+    {
+        if (LController.GetHairTriggerDown())
+        {
+            Debug.Log(gameObject.name + " LTrigger Press");
+        }
+        if (RController.GetHairTriggerDown())
+        {
+            Debug.Log(gameObject.name + " RTrigger Press");
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		float tickDistanceTraveled = 0.0f;
 
-		Vector3 currentLoc = pedalTrackerLeft.transform.localPosition;
-		tickDistanceTraveled = Vector3.Distance (previousLoc, currentLoc);
-		totalDistanceTraveled += tickDistanceTraveled;
+        CheckSteps();
+        CheckTurning();
 
-		Vector3 playerMovement = playerBase.transform.forward * tickDistanceTraveled;
-
-		playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerMovement * pedalDistanceVelocityMultiplier);
-
-		previousLoc = currentLoc;
 
 	}
 }
