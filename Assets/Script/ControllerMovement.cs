@@ -20,7 +20,14 @@ public class ControllerMovement : MonoBehaviour {
     void Update () {
         if (Controller.GetHairTriggerDown())
         {
-            Debug.Log(gameObject.name + " Trigger Press");
+
+        }
+
+        if (Controller.GetHairTriggerUp())
+        {
+            //Debug.Log(gameObject.name + " Trigger Press");
+
+            
         }
     }
 }
