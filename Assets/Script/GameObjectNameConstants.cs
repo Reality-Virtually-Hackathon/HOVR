@@ -1,7 +1,7 @@
 ﻿public static class GameObjectNameConstants {
 
-	public static string PlayerBaseName = "PlayerBase";
-	public static string PedalTrackerName = "PedalTracker";
+	public static string PlayerBaseName = "[CameraRig]";
+	public static string PedalTrackerName = "Pedal Tracker (right)";
 	public static string ScriptsObject= "ScriptsManager";
 
 }
