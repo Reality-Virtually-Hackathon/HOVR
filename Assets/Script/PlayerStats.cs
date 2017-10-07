@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerStats {
 
 	public float points;
-	ArrayList<float> sessionVelocities;
+	List<float> sessionVelocities;
+	GameObject scripts;
 
 	// Use this for initialization
 	void Start () {
-		sessionVelocities = new ArrayList<float> ();
-		
+		sessionVelocities = new List<float> ();
 	}
 	
 	// Update is called once per frame
