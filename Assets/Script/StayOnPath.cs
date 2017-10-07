@@ -16,7 +16,7 @@ public class StayOnPath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (CheckPosition ()) {
+		if (onPath){
 			visionBlockerLevel = 0f;	
 		} else {
 			visionBlockerLevel += 0.1f;
