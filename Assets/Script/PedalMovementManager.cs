@@ -32,8 +32,9 @@ public class PedalMovementManager : MonoBehaviour {
 
 		Vector3 playerMovement = playerBase.transform.forward * tickDistanceTraveled;
 
-		if(tickDistanceTraveled > 0.001f;
-		playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerMovement * pedalDistanceVelocityMultiplier);
+		if (tickDistanceTraveled > 0.001f) {
+			playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerMovement * pedalDistanceVelocityMultiplier);
+		}
 
 	}
 }

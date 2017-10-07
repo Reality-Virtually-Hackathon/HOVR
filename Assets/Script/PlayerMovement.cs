@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	GameObject PlayerBase;
 	Rigidbody rb;
-	float frictionConstant = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +17,6 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rb.velocity -= new Vector3(frictionConstant, frictionConstant, frictionConstant);
 	}
 
 	public void AddVelocity (Vector3 velocityToAdd){
