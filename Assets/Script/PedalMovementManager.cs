@@ -10,7 +10,7 @@ public class PedalMovementManager : MonoBehaviour {
 
 	float totalDistanceTraveled;
 	Vector3 previousLoc;
-	float pedalDistanceVelocityMultiplier = 1.0f;
+	float pedalDistanceVelocityMultiplier = 2.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +32,7 @@ public class PedalMovementManager : MonoBehaviour {
 
 		Vector3 playerMovement = playerBase.transform.forward * tickDistanceTraveled;
 
-		if (tickDistanceTraveled > 0.01f) {
-			playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerMovement * pedalDistanceVelocityMultiplier);
-		}
+		playerBase.GetComponent<PlayerMovement> ().AddVelocity (playerMovement * pedalDistanceVelocityMultiplier);
 
 		previousLoc = currentLoc;
 
