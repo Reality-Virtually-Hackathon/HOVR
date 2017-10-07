@@ -14,13 +14,13 @@ public class PathBoundary : MonoBehaviour {
 	//This script is attached to objects that form the boundaries of the path
 
 	void OnCollisionEnter(Collision collision){
-		if (collision.gameObject.tag = "player") {
+		if (collision.gameObject.tag == "player") {
 			PlayerBase.GetComponent<StayOnPath> ().onPath = false;
 		}
 	}
 
 	void OnCollisionExit(Collision collision){
-		if (collision.gameObject.tag = "player") {
+		if (collision.gameObject.tag == "player") {
 			PlayerBase.GetComponent<StayOnPath> ().onPath = true;
 		}
 	}
