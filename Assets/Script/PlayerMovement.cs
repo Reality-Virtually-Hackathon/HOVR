@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	GameObject PlayerBase;
+	private GameObject PlayerBase;
+
 	Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
-		PlayerBase = GameObject.Find (GameObjectNameConstants.PlayerBaseName);
+        PlayerBase = GameObject.Find(GameObjectNameConstants.PlayerBaseName);
+
 		rb = PlayerBase.GetComponent<Rigidbody> ();
 		Debug.Assert (rb != null);
 		
