@@ -9,7 +9,7 @@ public class PedalMovementManager : MonoBehaviour {
 
     float totalDistanceTraveled;
 	Vector3 previousLoc;
-	float pedalDistanceVelocityMultiplier = 1.0f;
+	float pedalDistanceVelocityMultiplier = 2.0f;
 
 	// Use this for initialization
 	void Start () {
