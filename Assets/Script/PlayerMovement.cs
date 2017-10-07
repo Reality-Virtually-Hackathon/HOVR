@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public GameObject PlayerBase;
+	GameObject PlayerBase;
 	Rigidbody rb;
 	float frictionConstant = 1.0f;
 
 	// Use this for initialization
 	void Start () {
+		PlayerBase = GameObject.Find (GameObjectNameConstants.PlayerBaseName);
 		rb = PlayerBase.GetComponent<Rigidbody> ();
 		Debug.Assert (rb != null);
 		
