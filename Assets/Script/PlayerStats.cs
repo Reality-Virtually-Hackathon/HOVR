@@ -7,16 +7,21 @@ public class PlayerStats {
 	public float points;
 	List<float> sessionVelocities;
 	GameObject scripts;
+	GameObject playerBase;
 
 	// Use this for initialization
 	void Start () {
 		sessionVelocities = new List<float> ();
+		scripts = GameObject.Find (GameObjectNameConstants.ScriptsObject);
+		playerBase = GameObject.Find (GameObjectNameConstants.PlayerBaseName);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		
+
+		//Get current velocity and save it to the list
+		float currentVelocity = playerBase.GetComponent<Rigidbody>().velocity.x; //TODO: verify what the forward velocity is
+		sessionVelocities.Add(currentVelocity);
 	}
 
 	void loadPlayerData (){
