@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class TutorialManager : MonoBehaviour {
 
 	void Start(){
 		pingSource = new AudioSource();
-		ping = Resources.LoadAsync ("ping") as AudioClip;
+		ping = Resources.Load("ping") as AudioClip;
 	}
 
 	void OnCollisionEnter(Collision collision){
