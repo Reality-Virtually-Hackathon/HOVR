@@ -6,6 +6,13 @@ public class TutorialManager : MonoBehaviour {
 
 	public GameObject turnsOn;
 	public GameObject turnsOff;
+	AudioSource pingSource;
+	AudioClip ping;
+
+	void Start(){
+		pingSource = new AudioSource();
+		ping = Resources.LoadAsync ("ping") as AudioClip;
+	}
 
 	void OnCollisionEnter(Collision collision){
 		try{
@@ -14,6 +21,7 @@ public class TutorialManager : MonoBehaviour {
 		}
 		catch(Exception e){
 		}
+		pingSource.PlayOneShot (ping);
 		Destroy (this.gameObject);
 	}
 
