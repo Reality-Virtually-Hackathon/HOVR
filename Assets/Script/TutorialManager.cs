@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour {
 
+	public GameObject turnsOn;
+	public GameObject turnsOff;
 
-	string[] tutorialText = new string[3];
-
-
-	// Use this for initialization
-	void Start () {
-		
+	void OnCollisionEnter(Collision collision){
+		turnsOff.SetActive (false);
+		turnsOn.SetActive (true);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
