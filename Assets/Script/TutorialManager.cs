@@ -15,7 +15,7 @@ public class TutorialManager : MonoBehaviour {
 		ping = Resources.Load("ping") as AudioClip;
 	}
 
-	void OnCollisionEnter(Collision collision){
+	void OnTriggerEnter(Collider collider){
 		try{
 			turnsOff.SetActive (false);
 			turnsOn.SetActive (true);
