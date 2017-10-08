@@ -8,6 +8,6 @@ public class Balloon : MonoBehaviour {
     {
         //Trigger sound
         GetComponent<AudioSource>().Play();
-        Destroy(this.gameObject);
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

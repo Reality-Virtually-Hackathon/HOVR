@@ -22,8 +22,7 @@ public class TutorialManager : MonoBehaviour {
 		}
 		catch(Exception e){
 		}
-		pingSource.PlayOneShot (ping);
-		Destroy (this.gameObject);
+        GetComponent<AudioSource>().Play();
 	}
 
 }
