@@ -9,5 +9,6 @@ public class Balloon : MonoBehaviour {
         //Trigger sound
         GetComponent<AudioSource>().Play();
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        this.gameObject.GetComponent<SphereCollider>().enabled = false;
     }
 }
