@@ -18,10 +18,17 @@ public class TutorialManager : MonoBehaviour {
 	void OnTriggerEnter(Collider collider){
 		try{
 			turnsOff.SetActive (false);
-			turnsOn.SetActive (true);
 		}
 		catch(Exception e){
 		}
+        try
+        {
+			turnsOn.SetActive (true);
+        }
+        catch(Exception e)
+        {
+
+        }
         GetComponent<AudioSource>().Play();
 	}
 
