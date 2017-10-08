@@ -47,12 +47,12 @@ public class ControllerMovement : MonoBehaviour {
     IEnumerator ScreenBlack()
     {
 
-        for(int i = 0; i<=225; i+=25)
+        for(float i = 0f; i<=1; i+=0.2f)
         {
 			Color temp = ScreenBlanker.GetComponent<Image>().color;
 			temp.a = i;
 			ScreenBlanker.GetComponent<Image>().color = temp;
-			yield return null;
+			yield return new WaitForSeconds(0.07f);
         }
 
     }
@@ -60,12 +60,12 @@ public class ControllerMovement : MonoBehaviour {
 	IEnumerator ScreenLight()
 	{
 
-		for(int i = 225; i>=0; i-=25)
+		for(float i = 1f; i>=0; i-=0.2f)
 		{
 			Color temp = ScreenBlanker.GetComponent<Image>().color;
 			temp.a = i;
 			ScreenBlanker.GetComponent<Image>().color = temp;
-			yield return null;
+			yield return new WaitForSeconds(0.07f);
 		}
 
 	}
