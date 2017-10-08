@@ -10,6 +10,7 @@ public class TutorialManager : MonoBehaviour {
 	void OnCollisionEnter(Collision collision){
 		turnsOff.SetActive (false);
 		turnsOn.SetActive (true);
+		Destroy (this);
 	}
 
 }
