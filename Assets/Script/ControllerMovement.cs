@@ -9,6 +9,8 @@ public class ControllerMovement : MonoBehaviour {
     private GameObject ScreenBlanker;
     private Vector3 direction;
 
+    public bool blinkEnabled = false;
+
     private SteamVR_TrackedObject trackedObj;
     private SteamVR_Controller.Device Controller
     {
@@ -42,12 +44,18 @@ public class ControllerMovement : MonoBehaviour {
         if (Controller.GetHairTriggerUp())
         {
             this.gameObject.transform.Find(GameObjectNameConstants.ArrowMesh).GetComponent<MeshRenderer>().enabled = false;
-            StartCoroutine (ScreenBlack ());
+            if (blinkEnabled)
+            {
+                StartCoroutine(ScreenBlack());
+            }
             direction = trackedObj.transform.forward;
             //Debug.Log(gameObject.name + " Trigger Press");
             direction = new Vector3(direction.x, 0, direction.z);
             playerBase.transform.rotation = Quaternion.LookRotation(direction);
-			StartCoroutine (ScreenLight ());
+            if (blinkEnabled)
+            {
+                StartCoroutine(ScreenLight());
+            }
         }
     }
 
