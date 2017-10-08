@@ -13,7 +13,6 @@ public class GifPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gif = new Sprite[138];
-		string 
 		for (int i = 0; i < 137; i++) {
 			if (i < 10) {
 				gif [i] = Resources.Load ("Gif/instructions_0000" + i + ".png") as Sprite;
