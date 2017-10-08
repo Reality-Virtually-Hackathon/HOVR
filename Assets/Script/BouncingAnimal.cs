@@ -8,7 +8,7 @@ public class BouncingAnimal : MonoBehaviour {
 
 	void Start(){
 		Smoke = Resources.Load("WhiteSmoke") as GameObject;
-		this.GetComponent<Rigidbody> ().velocity = new Vector3 (0, 0, 1);
+		//this.GetComponent<Rigidbody> ().velocity = new Vector3 (0, 0, 1);
 	}
 
 //	void Start(){
