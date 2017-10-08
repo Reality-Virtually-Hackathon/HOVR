@@ -51,10 +51,21 @@ public class ControllerMovement : MonoBehaviour {
 			Color temp = ScreenBlanker.GetComponent<Image>().color;
 			temp.a = i;
 			ScreenBlanker.GetComponent<Image>().color = temp;
+        	yield return true;
         }
 
-        yield return true;
     }
 
+	IEnumerator ScreenLight()
+	{
 
+		for(int i = 225; i>=0; i-=25)
+		{
+			Color temp = ScreenBlanker.GetComponent<Image>().color;
+			temp.a = i;
+			ScreenBlanker.GetComponent<Image>().color = temp;
+			yield return true;
+		}
+
+	}
 }
