@@ -7,5 +7,6 @@
     public static string RightController = "[CameraRig]/Controller (right)";
 	public static string ScreenBlanker = "[CameraRig]/Camera (eye)/Canvas/Panel";
     public static string DirectionController = RightController;
+    public static string ArrowMesh = "arrow/pCube1";
 
 }
