@@ -6,7 +6,7 @@ public class BirdController : MonoBehaviour {
 
 	private bool flying = false;
 	private Vector3 dir;
-	private float speed = 50f;
+	private float speed = 5f;
 
 	// Use this for initialization
 	void Start () {

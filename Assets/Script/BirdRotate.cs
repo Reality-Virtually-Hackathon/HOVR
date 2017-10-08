@@ -26,7 +26,7 @@ public class BirdRotate : MonoBehaviour {
     void Update () {
         
 		if (flying) {
-			transform.localPosition = new Vector3 (transform.localPosition.x, transform.localPosition.y + 0.01f, transform.localPosition.z);
+			//transform.localPosition = new Vector3 (transform.localPosition.x, transform.localPosition.y + 0.01f, transform.localPosition.z);
 		} else {
 			transform.Rotate(Vector3.up, speed * Time.deltaTime);
 		}
