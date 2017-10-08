@@ -35,11 +35,12 @@ public class ControllerMovement : MonoBehaviour {
 
         if (Controller.GetHairTriggerUp())
         {
+			StartCoroutine (ScreenBlack ());
             direction = trackedObj.transform.forward;
             //Debug.Log(gameObject.name + " Trigger Press");
             direction = new Vector3(direction.x, 0, direction.z);
             playerBase.transform.rotation = Quaternion.LookRotation(direction);
-            
+			StartCoroutine (ScreenLight ());
         }
     }
 
