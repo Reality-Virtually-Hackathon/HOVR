@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class GifPlayer : MonoBehaviour {
 
-    Sprite[] gif;
+    public Sprite[] gif;
+	public Image displayImage;
+	public int curr = 0;
+	public bool cycling = false;
+
 
 	// Use this for initialization
 	void Start () {
-        gif = new Sprite[138];
 
-        
 		
 	}
 
@@ -27,11 +29,18 @@ public class GifPlayer : MonoBehaviour {
 
     private void OnEnable()
     {
-        
+		cycling = true;
     }
+
+	private void OnDisable()
+	{
+		cycling = false;
+	}
 
     // Update is called once per frame
     void Update () {
-		
+		if (cycling) {
+			
+		}
 	}
 }
