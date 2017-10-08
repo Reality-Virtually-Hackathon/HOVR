@@ -15,11 +15,11 @@ public class GifPlayer : MonoBehaviour {
         gif = new Sprite[138];
 		for (int i = 0; i < 137; i++) {
 			if (i < 10) {
-				gif [i] = Resources.Load ("Gif/instructions_0000" + i + ".png") as Sprite;
+				gif [i] = Resources.Load ("Gif/instructions_0000" + i) as Sprite;
 			} else if (i < 100) {
-				gif [i] = Resources.Load ("Gif/instructions_000" + i + ".png") as Sprite;
+				gif [i] = Resources.Load ("Gif/instructions_000" + i) as Sprite;
 			} else {
-				gif [i] = Resources.Load ("Gif/instructions_00" + i + ".png") as Sprite;
+				gif [i] = Resources.Load ("Gif/instructions_00" + i) as Sprite;
 			}
 			
 		}
