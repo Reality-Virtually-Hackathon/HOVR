@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 1bae8949e4d40e5499decf7e29ac7001
+timeCreated: 1507427387
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: branici
+    100004: far
+    100006: gume
+    100008: kocnica
+    100010: korpa
+    100012: lanac
+    100014: lancanic
+    100016: nosac
+    100018: nosacFar
+    100020: nosacZfa
+    100022: osovine
+    100024: osovineT
+    100026: pedale
+    100028: pedaleGa
+    100030: pumpa
+    100032: ram
+    100034: rucka
+    100036: rucke
+    100038: sajla
+    100040: sedez
+    100042: sipkaSed
+    100044: sipkePed
+    100046: srafoviT
+    100048: tockovi
+    100050: ventili
+    100052: volan
+    100054: zfar
+    100056: zvonce
+    400000: //RootNode
+    400002: branici
+    400004: far
+    400006: gume
+    400008: kocnica
+    400010: korpa
+    400012: lanac
+    400014: lancanic
+    400016: nosac
+    400018: nosacFar
+    400020: nosacZfa
+    400022: osovine
+    400024: osovineT
+    400026: pedale
+    400028: pedaleGa
+    400030: pumpa
+    400032: ram
+    400034: rucka
+    400036: rucke
+    400038: sajla
+    400040: sedez
+    400042: sipkaSed
+    400044: sipkePed
+    400046: srafoviT
+    400048: tockovi
+    400050: ventili
+    400052: volan
+    400054: zfar
+    400056: zvonce
+    2300000: branici
+    2300002: far
+    2300004: gume
+    2300006: kocnica
+    2300008: korpa
+    2300010: lanac
+    2300012: lancanic
+    2300014: nosac
+    2300016: nosacFar
+    2300018: nosacZfa
+    2300020: osovine
+    2300022: osovineT
+    2300024: pedale
+    2300026: pedaleGa
+    2300028: pumpa
+    2300030: ram
+    2300032: rucka
+    2300034: rucke
+    2300036: sajla
+    2300038: sedez
+    2300040: sipkaSed
+    2300042: sipkePed
+    2300044: srafoviT
+    2300046: tockovi
+    2300048: ventili
+    2300050: volan
+    2300052: zfar
+    2300054: zvonce
+    3300000: branici
+    3300002: far
+    3300004: gume
+    3300006: kocnica
+    3300008: korpa
+    3300010: lanac
+    3300012: lancanic
+    3300014: nosac
+    3300016: nosacFar
+    3300018: nosacZfa
+    3300020: osovine
+    3300022: osovineT
+    3300024: pedale
+    3300026: pedaleGa
+    3300028: pumpa
+    3300030: ram
+    3300032: rucka
+    3300034: rucke
+    3300036: sajla
+    3300038: sedez
+    3300040: sipkaSed
+    3300042: sipkePed
+    3300044: srafoviT
+    3300046: tockovi
+    3300048: ventili
+    3300050: volan
+    3300052: zfar
+    3300054: zvonce
+    4300000: far
+    4300002: pumpa
+    4300004: volan
+    4300006: rucka
+    4300008: sedez
+    4300010: korpa
+    4300012: zvonce
+    4300014: lanac
+    4300016: nosacFar
+    4300018: sajla
+    4300020: gume
+    4300022: tockovi
+    4300024: pedale
+    4300026: pedaleGa
+    4300028: lancanic
+    4300030: osovine
+    4300032: sipkaSed
+    4300034: ram
+    4300036: osovineT
+    4300038: srafoviT
+    4300040: sipkePed
+    4300042: ventili
+    4300044: kocnica
+    4300046: rucke
+    4300048: branici
+    4300050: nosac
+    4300052: zfar
+    4300054: nosacZfa
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
