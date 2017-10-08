@@ -7,29 +7,40 @@ public class GifPlayer : MonoBehaviour {
 
     public Sprite[] gif;
 	public Image displayImage;
-	public int curr = 0;
 	public bool cycling = false;
 
 
 	// Use this for initialization
 	void Start () {
+        gif = new Sprite[138];
+		string 
+		for (int i = 0; i < 137; i++) {
+			if (i < 10) {
+				gif [i] = Resources.Load ("Gif/instructions_0000" + i + ".png") as Sprite;
+			} else if (i < 100) {
+				gif [i] = Resources.Load ("Gif/instructions_000" + i + ".png") as Sprite;
+			} else {
+				gif [i] = Resources.Load ("Gif/instructions_00" + i + ".png") as Sprite;
+			}
+			
+		}
 
 		
 	}
 
-    //IEnumerator playGif()
-    //{
-    //    for(int i = 0; i<=137; i++)
-    //    {
-    //        GetComponent<Image>().sprite =
-    //        yield return new WaitForSeconds(0.04f);
-    //    }
+    IEnumerator playGif()
+    {
+        for(int i = 0; i<=137; i++)
+        {
+	        displayImage.GetComponent<Image>().sprite = gif[i];
+            yield return new WaitForSeconds(0.04f);
+        }
 
-    //}
+    }
 
     private void OnEnable()
     {
-		cycling = true;
+		playGif ();
     }
 
 	private void OnDisable()
@@ -39,8 +50,8 @@ public class GifPlayer : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (cycling) {
-			
-		}
+//		if (cycling) {
+//			playGif ();
+//		}
 	}
 }
