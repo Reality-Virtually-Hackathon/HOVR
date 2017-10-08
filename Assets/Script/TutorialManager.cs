@@ -8,8 +8,12 @@ public class TutorialManager : MonoBehaviour {
 	public GameObject turnsOff;
 
 	void OnCollisionEnter(Collision collision){
-		turnsOff.SetActive (false);
-		turnsOn.SetActive (true);
+		try{
+			turnsOff.SetActive (false);
+			turnsOn.SetActive (true);
+		}
+		catch(Exception e){
+		}
 		Destroy (this.gameObject);
 	}
 
