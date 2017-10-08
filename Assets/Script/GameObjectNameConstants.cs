@@ -5,6 +5,7 @@
 	public static string ScriptsObject= "ScriptsManager";
     public static string LeftController = "[CameraRig]/Controller (left)";
     public static string RightController = "[CameraRig]/Controller (right)";
+	public static string ScreenBlanker = "Canvas/Panel";
     public static string DirectionController = RightController;
 
 }
