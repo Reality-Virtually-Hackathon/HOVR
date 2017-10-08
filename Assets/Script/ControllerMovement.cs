@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControllerMovement : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class ControllerMovement : MonoBehaviour {
     private void Start()
     {
         playerBase = GameObject.Find(GameObjectNameConstants.PlayerBaseName);
+		ScreenBlanker = GameObject.Find (GameObjectNameConstants.ScreenBlanker);
     }
 
 
@@ -41,12 +43,14 @@ public class ControllerMovement : MonoBehaviour {
         }
     }
 
-    IEnumerator BlinkScreen()
+    IEnumerator ScreenBlack()
     {
 
-        for(int i = 0; i<1; i++)
+        for(int i = 0; i<=225; i+=25)
         {
-            
+			Color temp = ScreenBlanker.GetComponent<Image>().color;
+			temp.a = i;
+			ScreenBlanker.GetComponent<Image>().color = temp;
         }
 
         yield return true;
