@@ -52,7 +52,7 @@ public class ControllerMovement : MonoBehaviour {
 			Color temp = ScreenBlanker.GetComponent<Image>().color;
 			temp.a = i;
 			ScreenBlanker.GetComponent<Image>().color = temp;
-        	yield return true;
+			yield return new WaitForSeconds(0.05);
         }
 
     }
@@ -65,7 +65,7 @@ public class ControllerMovement : MonoBehaviour {
 			Color temp = ScreenBlanker.GetComponent<Image>().color;
 			temp.a = i;
 			ScreenBlanker.GetComponent<Image>().color = temp;
-			yield return true;
+			yield return new WaitForSeconds(0.05);
 		}
 
 	}
